@@ -19,21 +19,12 @@ AddEvent("OnKeyPress", function(key)
     end
 end)
 
-function try(f, catch_f)
-    local status, exception = pcall(f)
-    if not status then
-        catch_f(exception)
-    end
-end
-
 AddEvent("ingame_editor:RunClient", function(code)
     if code == "" then return end
-    print(code)
---    try(function()
-        loadstring(code)()
---        ExecuteWebJS(WebUI, "SetError()")
---    end, function(err)
---        print("ERROR: "..err)
---        ExecuteWebJS(WebUI, "SetError('"..err.."')")
---    end)
+    loadstring(code)()
+end)
+
+AddEvent("ingame_editor:RunServer", function(code)
+    if code == "" then return end
+    CallRemoteEvent("ingame_editor:RunServer", code)
 end)

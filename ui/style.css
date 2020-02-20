@@ -19,11 +19,6 @@ html {
     color: white;
 }
 
-#error {
-    color:red;
-    font-weight:bold;
-}
-
 #editor textarea {
     height:200px;
     width:500px;
@@ -46,6 +41,12 @@ button {
     border:1px solid #046865;
     text-transform:uppercase;
     font-weight:bold;
+    outline: none;
+    position: relative;
+}
+
+button:active {
+    top:1px;
 }
 
 button:hover {
