@@ -1,0 +1,16 @@
+{
+    "author": "openface",
+    "version": "1.0",
+    "client_scripts": [
+        "client.lua"
+    ],
+    "server_scripts": [
+        "server.lua"
+    ],
+    "files": [
+        "ui/index.html",
+        "ui/ingame-editor.js",
+        "ui/jquery.js",
+        "ui/style.css"
+    ]
+}
