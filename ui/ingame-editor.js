@@ -6,11 +6,3 @@ $(document).ready(function () {
         CallEvent("ingame_editor:RunServer", $('#code').val().trim());
     });
 });
-
-function SetError(err) {
-    if (typeof err !== 'undefined') {
-        $('#error').html(err);
-    } else {
-        $('#error').html('');
-    }
-}

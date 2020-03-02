@@ -11,10 +11,14 @@ AddEvent("OnKeyPress", function(key)
     if key == "F4" then
         if GetWebVisibility(WebUI) == WEB_HIDDEN then	
             SetWebVisibility(WebUI, WEB_VISIBLE)
-            SetInputMode(INPUT_UI)
+            SetInputMode(INPUT_GAMEANDUI)
+            ShowMouseCursor(true)
+            SetIgnoreMoveInput(true)
         else
             SetWebVisibility(WebUI, WEB_HIDDEN)
             SetInputMode(INPUT_GAME)
+            ShowMouseCursor(false)
+            SetIgnoreMoveInput(false)
         end
     end
 end)
